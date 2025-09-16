@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "poppins", sans-serif;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  background: #1c1c2e;
+  color: #a2a5b3;
+  align-content: center;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  background: #28283c;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.card h1 {
+  padding: 10px 0;
+  font: 25px "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.card p {
+  text-align: center;
+  font: 14px "Poppins", sans-serif;
+  color: #82787c;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 70%, blue);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 5px;
+  z-index: -1;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+.card:hover::after,
+.card:hover::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 70%, red);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 5px;
+  z-index: -1;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card:hover::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
