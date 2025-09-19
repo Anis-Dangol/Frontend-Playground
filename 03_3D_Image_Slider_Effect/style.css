@@ -19,7 +19,10 @@
 .banner .slider .item {
   position: absolute;
   inset: 0 0 0 0;
-  transform: translateZ(550px);
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )  /*  ((Item_Position) - 1 ) * (360 / (Total_Items)) * 1deg [1deg is to declare the unit] */
+    translateZ(550px);
 }
 
 .banner .slider .item img {
