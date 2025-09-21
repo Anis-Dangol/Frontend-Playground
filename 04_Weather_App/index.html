@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <input type="text" autocomplete="off" />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <section class="result">
+        <figure class="name">
+          <figcaption>London</figcaption>
+          <img src="https://flagsapi.com/GB/shiny/32.png" alt="" />
+        </figure>
+        <figure class="temperature">
+          <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="" />
+          <figcaption>
+            <span>31</span>
+            <sup>o</sup>
+          </figcaption>
+        </figure>
+        <p class="description">Overcast Clouds</p>
+        <ul>
+          <li>
+            <span>Clouds</span>
+            <span>98</span>%
+          </li>
+          <li>
+            <span>Humidity</span>
+            <span>55</span>%
+          </li>
+          <li>
+            <span>Pressure</span>
+            <span>1001</span>hpa
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
