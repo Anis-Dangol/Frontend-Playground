@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
-.carasousel {
+.carousel {
   margin: 100px auto;
   width: 90%;
   display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
 }
 
 .group {
@@ -15,10 +21,21 @@
   align-items: center;
   justify-content: center;
   gap: 1em;
+  padding-right: 1em;
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
 }
 
 .card {
-  flex: 0 0 auto;
+  /* flex: 0 0 auto; */
   width: 300px;
   height: 450px;
   border-radius: none;
