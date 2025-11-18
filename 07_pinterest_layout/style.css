@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #1f1f1f;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  padding-block: 1rem;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.list {
+  columns: 300px; /* One line CSS to make responsive */
+  /* In a cetain screen, this will divide the column into 300px till the next column is not fit in the screen */
+}
